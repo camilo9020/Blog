@@ -2,18 +2,12 @@
 
 one:
   email: MyString
-  100: MyString
   password_digest: MyString
   name: MyString
-  100: MyString
-  twitter: MyString
-  50: MyString
+  twitter_handle: MyString
 
 two:
   email: MyString
-  100: MyString
   password_digest: MyString
   name: MyString
-  100: MyString
-  twitter: MyString
-  50: MyString
+  twitter_handle: MyString
