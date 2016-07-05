@@ -9,9 +9,12 @@
             <span class="post-title"><%= link_to p.title, p %></span>
             <p><%= p.updated_at.strftime("%Y-%m-%d") %></p>
             <span class="post-description"><%= p.body %></span>
-            <% if signed_in? %>
-
-            <%= link_to "Editar", edit_post_path(p) %>   <%= link_to 'Eliminar',  p,  method: :delete, data: { confirm: '¿Esta seguro de eliminar el post?' } %>
+            <% if signed_in? && p.user == current_user %>
+              <div class="actions">
+                <%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_post_path(p) %>
+                <%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, p, method: :delete, data: { confirm: "¿Estás seguro de eliminar este producto?" } %>
+              </div>
+            
             <% end %>
 
 

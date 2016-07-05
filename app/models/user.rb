@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 
 
 	has_secure_password validations: false
+	has_many :posts, dependent: :destroy
 
 	validates :email, uniqueness: true, format: /@/
 	validates :password_digest, presence: true, on: :create
