@@ -2,13 +2,20 @@
   <div class="container-fluid">
     <div class="navbar-header">
 
-      <a class="navbar-brand" href="#"> BLOG</a>
+     <%= link_to "BLOG", root_path, id: 'logo'  %>
       
        </div>
 
       <ul class="nav navbar-nav navbar-right">
-         <li><%= link_to 'Registrarse', '#' %></li>
-         <li><%= link_to 'Ingresar', '#'%></li>       
+
+
+		<% if signed_in? %>
+			<li><%= link_to 'Salir',  logout_path, method: 'delete' %></li>
+		<% else %>
+	         <li><%= link_to 'Registrarse', signup_path %></li>
+	         <li><%= link_to 'Ingresar', login_path %></li> 
+         <% end %>
+      
       </ul>
    
   </div>
