@@ -1,0 +1,13 @@
+es:
+  errors:
+    messages:
+      blank: "no puede estar en blanco"
+      invalid: "es inválido"
+
+  activerecord:
+    attributes:
+      user:
+        name: "El Nombre"
+        password_digest: "La Contraseña"
+      post:
+        title: "Titulo"
