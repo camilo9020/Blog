@@ -125,3 +125,15 @@
     &:hover { color: white; }
   }
 }
+.post-comments {
+  float: right;
+  color: #ccc;
+  padding: 10px;
+
+  .glyphicon { font-size: 21px; }
+  .comment-count {
+    margin-left: 15px;
+    font-size: 18px;
+    vertical-align: text-bottom;
+  }
+}
