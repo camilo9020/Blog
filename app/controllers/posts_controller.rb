@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
 
+	
+	before_action :private_access, except: [:index, :show]
+
 	def index
 
 		@posts= Post.all.order('created_at ASC')
