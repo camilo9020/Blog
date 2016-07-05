@@ -13,10 +13,6 @@
           	<div class="alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
 
-    <% if signed_in? %>
-  		<div>Hola <%= current_user.name %></div>
-	<% end %>
-
 	<%= yield %>
 
 </body>
