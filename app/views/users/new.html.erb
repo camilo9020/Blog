@@ -3,6 +3,8 @@
     <div class="col-sm-6 col-sm-offset-3">
       <h1>Crear Cuenta</h1>
 
+      <%= render 'shared/error_messages', object: @user  %>
+
       <%= form_for @user do |f| %>
         <div class="form-group">
           <%= f.email_field :email, class: "form-control input-lg", placeholder: "Email" %>
@@ -22,7 +24,7 @@
         </div>
 
         <div class="actions">
-          <%= f.submit class: "btn btn-primary btn-block btn-lg" %>
+          <%= f.submit 'Crear usuario', class: "btn btn-primary btn-block btn-lg" %>
         </div>
       <% end %>
     </div>
