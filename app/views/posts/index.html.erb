@@ -9,7 +9,10 @@
             <span class="post-title"><%= link_to p.title, p %></span>
             <p><%= p.updated_at.strftime("%Y-%m-%d") %></p>
             <span class="post-description"><%= p.body %></span>
+            <% if signed_in? %>
+
             <%= link_to "Editar", edit_post_path(p) %>   <%= link_to 'Eliminar',  p,  method: :delete, data: { confirm: '¿Esta seguro de eliminar el post?' } %>
+            <% end %>
 
 
 

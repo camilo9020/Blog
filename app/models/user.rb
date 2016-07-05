@@ -15,7 +15,12 @@ class User < ActiveRecord::Base
 
 
 	has_secure_password validations: false
-	
+
+	validates :email, uniqueness: true, format: /@/
+	validates :password_digest, presence: true, on: :create
+	validates :password_digest, length: { in: 6..20 }, allow_nil: true
+	validates :name, presence: true
+		
 
 
 end
