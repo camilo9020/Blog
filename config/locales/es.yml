@@ -3,6 +3,7 @@ es:
     messages:
       blank: "no puede estar en blanco"
       invalid: "es inválido"
+      too_short: "es demasiado corta"
 
   activerecord:
     attributes:
