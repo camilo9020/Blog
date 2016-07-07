@@ -9,10 +9,7 @@
             <span class="post-title"><%= link_to p.title, p %></span>
             <p><%= p.updated_at.strftime("%Y-%m-%d") %></p>
             <span class="post-description"><%= p.body %></span>
-            <div class="post-comments">
-              <span class="glyphicon glyphicon-comment"></span>
-              <span class="comment-count"> contador</span>
-            </div>
+           
             <% if signed_in? && p.user == current_user %>
               <div class="actions">
                 <%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_post_path(p) %>
@@ -20,6 +17,11 @@
               </div>
             
             <% end %>
+
+            <div class="post-comments">
+                <span class="glyphicon glyphicon-comment"></span>
+                <span class="comment-count"><%= p.comments.count %></span>
+            </div>
 
 
 

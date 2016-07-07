@@ -14,6 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'coffee-script-source', '1.8.0'
 gem 'gravatar-ultimate'
+gem 'bootstrap_form'
 
 gem 'annotate'
 
